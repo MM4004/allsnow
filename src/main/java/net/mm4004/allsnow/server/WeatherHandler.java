@@ -1,4 +1,4 @@
-package net.mm4004.allsnow;
+package net.mm4004.allsnow.server;
 
 import net.minecraft.world.storage.WorldInfo;
 
@@ -7,6 +7,7 @@ import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.relauncher.Side;
 
 public class WeatherHandler {
+
     @SubscribeEvent
     public void onWorldTicks(TickEvent.WorldTickEvent e) {
         if (e.side != Side.SERVER) {
