@@ -1,8 +1,10 @@
 package net.mm4004.allsnow;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.mm4004.allsnow.network.TimeSyncPacket;
 import net.mm4004.allsnow.server.TimeHandler;
 import net.mm4004.allsnow.server.WeatherHandler;
+import net.mm4004.allsnow.server.WorldGenerationHandler;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -29,6 +31,9 @@ public class CommonProxy {
         FMLCommonHandler.instance()
             .bus()
             .register(new TimeHandler());
+        WorldGenerationHandler wghandler = new WorldGenerationHandler();
+        wghandler.initialize();
+        MinecraftForge.EVENT_BUS.register(wghandler);
     }
 
     // postInit "Handle interaction with other mods, complete your setup based on this." (Remove if not needed)

@@ -3,12 +3,13 @@ package net.mm4004.allsnow.client;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldProviderSurface;
+import net.mm4004.allsnow.utils.GameTime;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
-import net.mm4004.allsnow.utils.GameTime;
 
 public class ClientTimeHandler {
+
     public static boolean isFrozenDay = false;
 
     @SubscribeEvent

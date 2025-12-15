@@ -4,14 +4,15 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.WorldProviderSurface;
 import net.mm4004.allsnow.AllSnow;
 import net.mm4004.allsnow.network.TimeSyncPacket;
+import net.mm4004.allsnow.utils.GameTime;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.relauncher.Side;
-import net.mm4004.allsnow.utils.GameTime;
 
 public class TimeHandler {
+
     private int dayCounter = 0;
 
     private enum State {
