@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package net.mm4004.allsnow;
 
 public class ClientProxy extends CommonProxy {
 
